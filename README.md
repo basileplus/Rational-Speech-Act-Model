@@ -22,7 +22,7 @@
 ---
 
 ## Introduction
-This document presents a comprehensive analysis of the Rational Speech Act (RSA) model, focusing on dataset creation, model implementation, and various enhancements including cost and prior knowledge.
+This document presents a comprehensive analysis of the Rational Speech Act (RSA) model, model implementation, and various enhancements including cost and prior knowledge. The code is provided in the ready-to-compile notbook available on the repo.
 
 ## Rational Speech Act (RSA) model explanation
 
