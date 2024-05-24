@@ -72,6 +72,7 @@ We begin by defining the parameters of our model :
 - $C$ : the cost of each attribute. Typically the number of bits needed to transmit the attribute. 
 
 We then define the _literal listener_ as the probability that the object $o$ has the attribute $a$ given the description $d$ of the speaker. This is defined as :
+
 $$
 L_0(o|a) = \frac{T(o,a)}{\sum_{o'} T(o',a)}
 $$
@@ -93,6 +94,7 @@ where $C(d)$ is the cost of the description $d$, for now 0
 #### The pragmatic listener
 
 The pragmatic listener will then infer the object $o$ given the description $d$ of the speaker. It is defined as :
+
 $$
 L_1(o|d) \propto P(o) S_1(d|o)
 $$
@@ -104,6 +106,7 @@ $o$ is the row and $a$ is the column.
 ### Use example
 
 We use the precedent example with the following matrix $T$ :
+
 $$
 \begin{pmatrix}
 0 & 1 \\
@@ -157,10 +160,13 @@ Now the speaker will take into account the cost of the attributes to choose the 
 We can also add prior knowledge of the probability distribution of the objects. For instance we may know that we are more likely to describe object 1 than object 2. We can add this information in the model by adding a prior matrix $P$ of size $O$ where $P[o]$ is the prior probability of the object $o$. 
 
 This probability will be added in the litteral listener. For now we initialized the litteral listener with a uniform distribution as follows :
+
 $$
 L_\text{lit}(o|a) = \frac{T(o,a)}{\sum_{o'} T(o',a)}
 $$
+
 Now we can add the prior information in the litteral listener as follows :
+
 $$
 L_\text{lit}(o|a) = \frac{T(o,a)P[o]}{\sum_{o'} T(o',a)P[o']}
 $$
